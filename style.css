@@ -1,0 +1,827 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace, 'Inter';
+  font-style: italic;
+  box-sizing: border-box;
+
+  font-size: 18px;
+}
+
+:root {
+  --map-bg: #ECE8DD;
+
+  --mbc: #EAAC7F;
+  --mbbc: #A56B41;
+
+  --bbc: #CAB2F0;
+  --bbbc: #7338D0;
+
+  --clc: #CCD6A6;
+  --clbc: #939D6A;
+
+  --ac: #7AAFFF;
+  --abc: #316DC7;
+
+  --cc: #EFECA5;
+  --cbc: #E4DE4B;
+
+  --ssc: #83225C;
+  --ssbc: #C670A3;
+
+  --goc: #7371FF;
+  --gobc: #323178;
+
+  --jc: #F89999;
+  --jbc: #8E3F3F;
+
+  --gc: #78E46E;
+  --gbc: #761919;
+
+  --kc: #E0C097;
+  --kbc: #8E3F3F;
+
+  --mabc: #E4DE4B;
+  --mabbc: #D9B123;
+
+  --lc: #FF8A00;
+  --lbc: #B85C38;
+
+  --gymc: #704F4F;
+  --gymbc: #661D1D;
+
+  --wcc: #EC6666;
+  --wcbc: #CA3434;
+
+  --ground: #ECE8DD;
+  --garden: #78E46E;
+  --lgc: #CDF8A3;
+  --road: #A9A6A3;
+  --pondc: #46DEFF;
+}
+
+/*Map*/
+body {
+  /*min-width: 100%;
+  min-height: 100vh;
+*/
+  width: 1440px;
+  height: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--map-bg);
+}
+
+.map {
+  position: relative;
+  width: 1300px;
+  height: 1024px;
+
+  background: var(--map-bg);
+
+  scroll-behavior: smooth;
+
+  overflow: hidden;
+  border: 4px solid #D69D00;
+
+  /*transform: scale(0.5)
+  zoom: 1;*/
+}
+
+.map div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*pin style*/
+.pin {
+  width: 40px;
+  padding-bottom: 20px;
+  display: none;
+}
+
+/*Main Building*/
+.main {
+  position: absolute;
+  background: var(--mbc);
+  border: 4px solid var(--mbbc);
+}
+
+.main:hover .pin {
+  display: block;
+}
+
+/* Main Bock*/
+.main-building1 {
+  width: 146px;
+  height: 114px;
+  left: 622px;
+  top: 649px;
+
+  font-weight: 400;
+}
+
+/*Block 1*/
+.main-building2 {
+  width: 38px;
+  height: 34px;
+  left: 715px;
+  top: 759px;
+  border-width: 0px 4px 4px 4px;
+}
+
+/* Block 2*/
+.main-building3 {
+  width: 32px;
+  height: 56px;
+  left: 594px;
+  top: 674px;
+  border-width: 4px 0px 4px 4px;
+}
+
+/*B.M.S Building*/
+.bms-building {
+  width: 145px;
+  height: 147px;
+  left: 894px;
+  top: 841px;
+
+  background: var(--bbc);
+  border: 4px solid var(--bbbc);
+  border-radius: 15px;
+}
+
+/*Chem. Lab*/
+.chem-lab {
+  width: 99px;
+  height: 141px;
+  left: 982px;
+  top: 645px;
+
+  background: var(--clc);
+  border: 4px solid var(--clbc);
+  border-radius: 15px;
+}
+
+/*Audiotorium*/
+.audio {
+  background: var(--ac);
+  border: 4px solid var(--abc);
+  border-radius: 25px;
+}
+
+/*Audiotorium Big*/
+.audiotorium-big {
+  width: 75px;
+  height: 205px;
+  left: 578px;
+  top: 391px;
+}
+
+/*Audiotorium Small*/
+.audiotorium-small {
+  width: 122px;
+  height: 79px;
+  left: 524px;
+  top: 841px;
+}
+
+/*Audiotorium Font*/
+.audiotorium-big p {
+  transform: rotate(-90deg);
+}
+
+.audiotorium-small p {
+  font-size: 14px;
+}
+
+/*Canteens*/
+.canteen {
+  width: 54px;
+  height: 143px;
+  left: 459px;
+  top: 718px;
+
+  background: var(--cc);
+  border: 4px solid var(--cbc);
+  border-radius: 7px;
+}
+
+.canteen p {
+  transform: rotate(-90deg)
+}
+
+/*Shetty Canteen*/
+.shetty-canteen {
+  width: 70px;
+  height: 58px;
+  left: 474px;
+  top: 593px;
+
+  background: var(--cc);
+  border: 4px solid var(--cbc);
+  border-radius: 7px;
+}
+
+.shetty-canteen p {
+  font-size: 12px;
+}
+
+/*Stationary Store*/
+.stationary-store {
+  width: 67px;
+  height: 42px;
+  left: 402px;
+  top: 596px;
+
+  background: var(--ssc);
+  border: 4px solid var(--ssbc);
+}
+
+.stationary-store p {
+  font-size: 9px;
+  color: #fff;
+}
+
+/*Geography Center*/
+.geog-center {
+  width: 104px;
+  height: 74px;
+  left: 268px;
+  top: 569px;
+
+  background: var(--goc);
+  border: 4px solid var(--gobc);
+  border-radius: 10px;
+}
+
+/*J*/
+.j-center {
+  width: 190px;
+  height: 64px;
+  left: 250px;
+  top: 708px;
+
+  background: var(--jc);
+  border: 4px solid var(--jbc);
+  border-radius: 10px;
+  transform: rotate(30deg)
+}
+
+.agro-area {
+  width: 285px;
+  height: 250px;
+  left: 119px;
+  top: 218px;
+
+  background: var(--gc);
+  border: 4px solid var(--gbc);
+  z-index: 1;
+}
+
+.krida-bhavan {
+  width: 130px;
+  height: 72px;
+  left: 524px;
+  top: 282px;
+
+  background: var(--kc);
+  border: 4px solid var(--kbc);
+  border-radius: 10px;
+}
+
+/*Mahaveer Bhavan*/
+.mahaveer-bhavan1 {
+  width: 57px;
+  height: 194px;
+  left: 742px;
+  top: 214px;
+
+  background: var(--mabc);
+  border: 4px solid var(--mabbc);
+}
+
+.mahaveer-bhavan1 p {
+  transform: rotate(-90deg);
+}
+
+.mahaveer-bhavan2 {
+  width: 31px;
+  height: 36px;
+  left: 715px;
+  top: 214px;
+
+  border: 4px solid var(--mabbc);
+  border-width: 4px 0px 4px 4px;
+  background: var(--mabc);
+}
+
+/*Law Building*/
+.law-building {
+  background: var(--lc);
+  border-color: var(--lbc);
+  border-style: solid;
+}
+
+.l1 {
+  width: 42px;
+  height: 42px;
+  left: 984px;
+  top: 300px;
+
+  border-width: 4px 0px 4px 4px;
+  z-index: 2;
+}
+
+.l2 {
+  width: 43px;
+  height: 132px;
+  left: 1022px;
+  top: 210px;
+
+  border-width: 0px 4px 4px 4px;
+  z-index: 1;
+}
+
+.l3 {
+  width: 220px;
+  height: 42px;
+  left: 845px;
+  top: 172px;
+
+  border-width: 4px;
+}
+
+.l4 {
+  width: 42px;
+  height: 72px;
+  left: 845px;
+  top: 210px;
+
+  border-width: 0px 4px 4px 4px;
+}
+
+/*GYM*/
+.gym {
+  width: 173px;
+  height: 51px;
+  left: 845px;
+  top: 357px;
+
+  background: var(--gymc);
+  border: 4px solid var(--gymbc);
+  border-radius: 10px
+}
+
+/*Water Center*/
+.water-center {
+  width: 30px;
+  height: 30px;
+  left: 682px;
+  top: 831px;
+
+  background: var(--wcc);
+  border: 4px solid var(--w);
+  border-radius: 50%;
+}
+
+/*Grounds*/
+.ground1 {
+  width: 394px;
+  height: 162px;
+  left: 701px;
+  top: 448px;
+
+  background: var(--ground);
+}
+
+.ground2 {
+  width: 1300px;
+  height: 150px;
+  left: 0;
+  top: 0;
+
+  background: var(--ground);
+}
+
+/*Gardens*/
+.garden {}
+
+.garden1 {
+  width: 129px;
+  height: 98px;
+  left: 748px;
+  top: 825px;
+
+  background: var(--garden);
+}
+
+.garden2 {
+  width: 151px;
+  height: 166px;
+  left: 787px;
+  top: 638px;
+
+  background: var(--garden);
+}
+
+.garden3 {
+  width: 123px;
+  height: 78px;
+  left: 893px;
+  top: 218.39px;
+
+  background: var(--garden);
+}
+
+/*Light Garden*/
+.lightgarden {
+  background: var(--lgc);
+}
+
+.lg1 {
+  width: 495px;
+  height: 394px;
+  left: 17px;
+  top: 152px;
+}
+
+.lg2 {
+  width: 50px;
+  height: 169px;
+  left: 511px;
+  top: 377px;
+}
+
+.lg3 {
+  width: 65px;
+  height: 57px;
+  left: 650px;
+  top: 885px;
+}
+
+.lg4 {
+  width: 206px;
+  height: 32px;
+  left: 833px;
+  top: 992px;
+}
+
+/*Roads*/
+.road {
+  background: var(--road);
+}
+
+.main-road {
+  width: 640px;
+  height: 48px;
+  left: -55px;
+  bottom: 100px;
+
+  transform: rotate(30deg);
+}
+
+.road1 {
+  width: 27px;
+  height: 199px;
+  left: 721px;
+  top: 825px;
+}
+
+.road2 {
+  width: 146px;
+  height: 15px;
+  left: 748px;
+  top: 923px;
+}
+
+.road3 {
+  width: 525px;
+  height: 21px;
+  left: 581px;
+  top: 804px;
+}
+
+.road4 {
+  width: 24px;
+  height: 17px;
+  left: 938px;
+  top: 824px;
+}
+
+.road5 {
+  width: 28px;
+  height: 215px;
+  left: 553px;
+  top: 610px;
+}
+
+.road6 {
+  width: 176px;
+  height: 21px;
+  left: 377px;
+  top: 674px;
+}
+
+.road7 {
+  width: 525px;
+  height: 28px;
+  left: 581px;
+  top: 610px;
+}
+
+.road8 {
+  width: 24px;
+  height: 166px;
+  left: 938px;
+  top: 638px;
+}
+
+.road9 {
+  width: 28px;
+  height: 427px;
+  left: 672px;
+  top: 183px;
+}
+
+.road10 {
+  width: 332px;
+  height: 23px;
+  left: 700px;
+  top: 425px;
+}
+
+.road11 {
+  width: 24px;
+  height: 106px;
+  left: 1032px;
+  top: 342px;
+}
+
+.road12 {
+  width: 28px;
+  height: 852px;
+  left: 1106px;
+  top: 169px
+}
+
+/*Gates*/
+.gate {
+  background: url("/assets/gate.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gate1 {
+  width: 59px;
+  height: 38px;
+  left: 705px;
+  top: 986px;
+}
+
+.gate2 {
+  width: 59px;
+  height: 35px;
+  left: 1090px;
+  top: 989px;
+}
+
+/*Fence*/
+.fence {
+  background: url("assets/fence.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.f1 {
+  width: 38px;
+  height: 37px;
+  left: 799px;
+  top: 311px;
+}
+
+.f2 {
+  width: 38px;
+  height: 37px;
+  left: 835px;
+  top: 311px;
+}
+
+.f3 {
+  width: 33.3px;
+  height: 37px;
+  left: 873px;
+  top: 311px;
+}
+
+.f4 {
+  width: 37px;
+  height: 37px;
+  left: 916px;
+  top: 311px;
+}
+
+.f5 {
+  width: 37px;
+  height: 37px;
+  left: 950px;
+  top: 311px;
+}
+
+.f6 {
+  width: 33.3px;
+  height: 37px;
+  left: 800px;
+  top: 240px;
+}
+
+.f7 {
+  width: 33.3px;
+  height: 37px;
+  left: 814px;
+  top: 240px;
+}
+
+/*Pond*/
+.p1 {
+  width: 35px;
+  height: 35px;
+  left: 814px;
+  top: 750px;
+  border-radius: 50%;
+  background: var(--pondc);
+}
+
+.p2 {
+  width: 35px;
+  height: 35px;
+  left: 842px;
+  top: 750px;
+  border-radius: 50%;
+  background: var(--pondc);
+}
+
+/*tress*/
+.tree {
+  width: 40px;
+  height: 40px;
+  background: url("/assets/tree.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tr1 {
+  left: 754px;
+  top: 874px;
+}
+
+.tr2 {
+  left: 817px;
+  top: 801px;
+}
+
+.tr3 {
+  left: 901px;
+  top: 801px;
+}
+
+.tr4 {
+  left: 1015px;
+  top: 799px;
+}
+
+.tr5 {
+  left: 1050px;
+  top: 753px;
+}
+
+.tr6 {
+  left: 777px;
+  top: 683px;
+}
+
+.tr7 {
+  left: 824px;
+  top: 619px;
+}
+
+.tr8 {
+  left: 550px;
+  top: 576px;
+}
+
+.tr9 {
+  left: 650px;
+  top: 384px;
+}
+
+.tr10 {
+  left: 404px;
+  top: 698px;
+}
+
+.tr11 {
+  left: 524px;
+  top: 800px;
+}
+
+.tr12 {
+  left: 695px;
+  top: 287px;
+}
+
+.tr13 {
+  left: 1070px;
+  top: 900px;
+}
+
+/*tree 2*/
+.tree2 {
+  width: 40px;
+  height: 40px;
+
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+}
+
+.tr20 {
+  left: 680px;
+  top: 925px;
+}
+
+.tr21 {
+  left: 750px;
+  top: 925px;
+}
+
+.tr22 {
+  left: 830px;
+  top: 874px;
+}
+
+.tr23 {
+  left: 754px;
+  top: 800px;
+}
+
+.tr24 {
+  width: 350px;
+  height: 40px;
+  left: 716px;
+  top: 565px;
+}
+
+.tr25 {
+  width: 350px;
+  height: 40px;
+  left: 716px;
+  top: 448px;
+}
+
+.tr26 {
+  left: 1048px;
+  top: 346px;
+}
+
+.tr27 {
+  left: 865px;
+  top: 770px;
+}
+
+.tr28 {
+  left: 899px;
+  top: 710px;
+}
+
+.tr29 {
+  left: 769px;
+  top: 638px;
+}
+
+.tr30 {
+  width: 330px;
+  height: 40px;
+  left: 430px;
+  top: 150px;
+}
+
+.tr31 {
+  left: 900px;
+  top: 627px
+}
+
+.tr32 {
+  left: 1070px;
+  top: 633px;
+}
