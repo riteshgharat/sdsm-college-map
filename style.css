@@ -114,9 +114,9 @@ body {
   border: 4px solid var(--mbbc);
 }
 
-.main:hover .pin {
+/*.main:hover .pin {
   display: block;
-}
+}*/
 
 /* Main Bock*/
 .main-building1 {

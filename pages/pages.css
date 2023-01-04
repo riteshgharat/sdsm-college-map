@@ -6,7 +6,7 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #ECE8DD;
 }
 
@@ -30,7 +30,7 @@ body {
 
 .img-div img {
   width: 45%;
-  max-height: 90%;
+  max-height: 95%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
