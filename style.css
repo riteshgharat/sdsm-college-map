@@ -198,7 +198,7 @@ body {
   transform: rotate(-90deg);
 }
 
-.audiotorium-small p {
+.audiotorium-small a {
   font-size: 14px;
 }
 
