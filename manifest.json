@@ -1,11 +1,15 @@
 {
   "name": "SDSM College Map",
   "short_name": "SDSM Map",
+  "version": "1.0.0",
+  "description": "Campas Map of S.D.S.M College Palghar",
   "theme_color": "#ece8dd",
   "background_color": "#ece8dd",
-  "display": "standalone",
   "scope": "/",
   "start_url": "/index.html",
+  "lang": "en-US",
+  "orientation": "any",
+  "display": "standalone",
   "icons": [
     {
       "src": "/assets/icons/icon-72x72.png",
