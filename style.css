@@ -10,49 +10,49 @@
 
 :root {
   --map-bg: #ECE8DD;
-
+  /*main building*/
   --mbc: #EAAC7F;
   --mbbc: #A56B41;
-
+  /*bms building*/
   --bbc: #CAB2F0;
   --bbbc: #7338D0;
-
+  /*chem lab*/
   --clc: #CCD6A6;
   --clbc: #939D6A;
-
+  /*auditorium*/
   --ac: #7AAFFF;
   --abc: #316DC7;
-
+  /*canteen*/
   --cc: #EFECA5;
   --cbc: #E4DE4B;
-
+  /*shetty canteen*/
   --ssc: #83225C;
   --ssbc: #C670A3;
-
+  /*geo center*/
   --goc: #7371FF;
   --gobc: #323178;
-
+  /*mtsc*/
   --jc: #F89999;
   --jbc: #8E3F3F;
-
+  /*garden*/
   --gc: #78E46E;
   --gbc: #761919;
-
+  /*krida*/
   --kc: #E0C097;
   --kbc: #8E3F3F;
-
+  /*mahaveer*/
   --mabc: #E4DE4B;
   --mabbc: #D9B123;
-
+  /*law*/
   --lc: #FF8A00;
   --lbc: #B85C38;
-
+  /*gym*/
   --gymc: #704F4F;
   --gymbc: #661D1D;
-
+  /*water center*/
   --wcc: #EC6666;
   --wcbc: #CA3434;
-
+  /*other*/
   --ground: #ECE8DD;
   --garden: #78E46E;
   --lgc: #CDF8A3;
@@ -63,8 +63,8 @@
 /*Map*/
 body {
   /*min-width: 100%;
-  min-height: 100vh;
-*/
+  min-height: 100vh;*/
+  
   width: 1440px;
   height: 1200px;
   display: flex;
@@ -129,10 +129,6 @@ a:hover {
   background: var(--mbc);
   border: 4px solid var(--mbbc);
 }
-
-/*.main:hover .pin {
-  display: block;
-}*/
 
 /* Main Bock*/
 .main-building1 {
