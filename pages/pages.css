@@ -21,7 +21,7 @@ body {
 }
 
 .img-div {
-  height: calc(100vh - 100px);
+  height: calc(90vh - 100px);
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -54,4 +54,16 @@ body {
 
 .backBtn a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .heading{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+  }
+  .img-div {
+    max-height: 40vh;
+    margin-top: 80px;
+  }
 }

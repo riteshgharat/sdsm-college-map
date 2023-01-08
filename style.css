@@ -97,7 +97,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  cursor: pointer;
 }
 
 .heading {
@@ -108,6 +107,12 @@ body {
   padding: 10px 0;
 }
 
+/*pin style*/
+.pin {
+  width: 40px;
+}
+
+/*feedback btn*/
 .feedback {
   width: 120px;
   height: 50px;
@@ -124,13 +129,7 @@ body {
   color: #fff;
 }
 
-/*pin style*/
-.pin {
-  width: 40px;
-  padding-bottom: 20px;
-  display: none;
-}
-
+/*a tag*/
 a {
   cursor: pointer;
 }
@@ -1024,4 +1023,29 @@ a:hover {
 .tr60 {
   top: 850px;
   left: 850px;
+}
+
+.tr61 {
+  top: 600px;
+  left: 150px;
+}
+
+.tr62 {
+  top: 670px;
+  left: 90px;
+}
+
+.tr63 {
+  top: 900px;
+  left: 400px;
+}
+
+.tr64 {
+  top: 800px;
+  left: 300px;
+}
+
+.tr65 {
+  top: 740px;
+  left: 200px;
 }
