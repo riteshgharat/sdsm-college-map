@@ -823,13 +823,13 @@ a:hover {
 }
 
 .tr27 {
-  left: 870px;
-  top: 760px;
+  left: 896px;
+  top: 765px;
 }
 
 .tr28 {
-  left: 899px;
-  top: 710px;
+  left: 905px;
+  top: 670px;
 }
 
 .tr29 {
@@ -852,6 +852,41 @@ a:hover {
 .tr32 {
   left: 1070px;
   top: 633px;
+}
+
+.tr33 {
+  top: 760px;
+  left: 790px;
+}
+
+.tr34 {
+  top: 465px;
+  left: 693px;
+}
+
+.tr35 {
+  top: 530px;
+  left: 693px;
+}
+
+.tr36 {
+  top: 530px;
+  left: 1050px;
+}
+
+.tr37 {
+  top: 465px;
+  left: 1050px;
+}
+
+.tr38 {
+  top: 766px;
+  left: 840px;
+}
+
+.tr39 {
+  top: 725px;
+  left: 905px;
 }
 
 .bench {
